@@ -2,15 +2,18 @@ package com.purifall.materialtest.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.purifall.materialtest.R;
+import com.purifall.materialtest.activitys.ToolbarActivity;
 
 import java.util.ArrayList;
 
@@ -38,6 +41,8 @@ public class DesignAdapter extends RecyclerView.Adapter {
             public void onClick(View view) {
                 switch (mData.get(position)){
                     case "Toolbar": {
+                        Intent intent = new Intent(mContext,ToolbarActivity.class);
+                        mContext.startActivity(intent);
                         break;
                     }
                     default:
