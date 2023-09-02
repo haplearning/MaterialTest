@@ -1,4 +1,4 @@
-package com.purifall.materialtest.adapter;
+package com.purifall.materialtest.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.purifall.materialtest.R;
+import com.purifall.materialtest.activitys.DrawerLayoutActivity;
 import com.purifall.materialtest.activitys.ToolbarActivity;
 
 import java.util.ArrayList;
@@ -42,6 +42,11 @@ public class DesignAdapter extends RecyclerView.Adapter {
                 switch (mData.get(position)){
                     case "Toolbar": {
                         Intent intent = new Intent(mContext,ToolbarActivity.class);
+                        mContext.startActivity(intent);
+                        break;
+                    }
+                    case "DrawerLayout": {
+                        Intent intent = new Intent(mContext, DrawerLayoutActivity.class);
                         mContext.startActivity(intent);
                         break;
                     }

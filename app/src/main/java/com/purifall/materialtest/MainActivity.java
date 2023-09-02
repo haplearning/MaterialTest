@@ -6,14 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.purifall.materialtest.adapter.DesignAdapter;
+import com.purifall.materialtest.adapters.DesignAdapter;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private final ArrayList<String> DESIGN_LIST = new ArrayList<String>(){
+    private static final ArrayList<String> DESIGN_LIST = new ArrayList<String>(){
         {
             add("Toolbar");
+            add("DrawerLayout");
 
         }
     };
